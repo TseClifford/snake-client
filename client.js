@@ -9,7 +9,7 @@ const connect = function() {
 
   conn.on("connect", () => {
     console.log(`Successfully connected to game server`);
-    conn.write(`Name: SNK`)
+    conn.write("Name: CT");
   });
 
   // interpret incoming data as text
@@ -22,4 +22,6 @@ const connect = function() {
   return conn;
 };
 
-module.exports = connect;
+module.exports = {
+  connect,
+};
